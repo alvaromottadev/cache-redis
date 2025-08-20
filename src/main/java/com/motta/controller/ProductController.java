@@ -1,7 +1,6 @@
 package com.motta.controller;
 
 import com.motta.model.Product;
-import com.motta.repository.ProductRepository;
 import com.motta.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

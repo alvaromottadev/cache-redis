@@ -2,6 +2,7 @@ package com.motta.service;
 
 import com.motta.model.Product;
 import com.motta.repository.ProductRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +16,9 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
+    @Cacheable(value = "products")
     public List<Product> getAllProducts() {
+        System.out.println("Fetching products from the database...");
         return this.productRepository.findAll();
     }
 
