@@ -26,7 +26,7 @@ public class ProductController {
         return ResponseEntity.ok(products);
     }
 
-    @PostMapping
+    @PostMapping("/cache/reset")
     public void resetCache(){
         productService.resetCache();
     }
